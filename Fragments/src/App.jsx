@@ -1,9 +1,12 @@
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
 // import React from "react";
 import "./App.css";
 
 function App() {
-  let tools = ["Linux", "AWS", "Docker","jenkins","Kubernetes","Ansible"];
+  let tools = ["Linux", "AWS", "Docker", "jenkins", "Kubernetes", "Ansible"];
+  // let tools = [];
 
   return (
     /*
@@ -30,11 +33,31 @@ Key Prop: Assign unique key for optimized re-renders
     This is the alternate of loops
 */
 
-
-    <>
+    /* <>
       <h1>DevOps Tools</h1>
       <ul className="list-group lead">
         {tools.map((item) => (                      
+          <li key={item} className="list-group-item">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </>
+*/
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+ Conditional Rendering: Displaying content based on certain conditions.Allows for dynamic user interfaces.
+ use ternary operatiors  
+ */
+    <>
+      <h1>DevOps Tools</h1>
+      {/* using ternary operator */}
+      {/* {tools.length == 0 ? <h3>No DevOps tools listed.</h3> : null}   */}
+      {/* using logical  operator */}
+      {tools.length === 0 && <h3>No DevOps tools listed.</h3>}
+      <ul className="list-group lead">
+        {tools.map((item) => (
           <li key={item} className="list-group-item">
             {item}
           </li>
