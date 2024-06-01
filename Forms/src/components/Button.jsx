@@ -5,7 +5,7 @@ function Button() {
   const [name, setName] = useState({ firstName: "", lastName: "" });
   function handleSubmit(e){
       e.preventDefault();       //Prevents default behaviour of the react of page refreshing
-      console.log(name);
+      console.log(name);        //prints the name
   }
 
   return (
