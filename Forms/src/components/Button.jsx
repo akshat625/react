@@ -1,12 +1,16 @@
 import React from "react";
 import { useState } from "react";
 
-function MultiInput() {
+function Button() {
   const [name, setName] = useState({ firstName: "", lastName: "" });
+  function handleSubmit(e){
+      e.preventDefault();       //Prevents default behaviour of the react of page refreshing
+      console.log(name);
+  }
 
   return (
     <div>
-      Multiple Input
+      Submit
       <form>
         <input
           onChange={(e) => setName({ ...name, firstName: e.target.value })}
@@ -19,10 +23,15 @@ function MultiInput() {
           type="text"
           value={name.lastName}
         />
+        <br />
+        <button onClick={(e)=>handleSubmit(e)}>Add</button>
       </form>
-      <br /><br /><br />
+      
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
 
-export default MultiInput;
+export default Button;
