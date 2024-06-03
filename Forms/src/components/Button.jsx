@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 
 function Button() {
-  const [name, setName] = useState({ firstName: "", lastName: "" });
+  const [name, setName] = useState({ firstName: "", lastName: "" }); 
   function handleSubmit(e){
       e.preventDefault();       //Prevents default behaviour of the react of page refreshing
-      console.log(name);        //prints the name
+      console.log(name);        //prints the name  
   }
 
   return (
@@ -17,9 +17,9 @@ function Button() {
           type="text"
           value={name.firstName}
         />
-        <br />
+         <br />
         <input
-          onChange={(e) => setName({ ...name, lastName: e.target.value })}
+          onChange={(e) => setName({ ...name, lastName: e .target.value })}
           type="text"
           value={name.lastName}
         />
